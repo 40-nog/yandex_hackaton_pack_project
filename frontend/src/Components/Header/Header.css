@@ -1,0 +1,67 @@
+.header {
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 112px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header__container_burger-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 45.78px;
+  margin: 0 0 0 24px;
+}
+
+.header__burger {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 51.25px;
+  height: 51.25px;
+  background-image: url(../../images/burger.svg);
+}
+
+.header__logo {
+  width: 191.29px;
+  height: 45.25px;
+  background-image: url(../../images/logo.svg);
+  transition: opacity 0.4s linear;
+}
+
+.header__text {
+  font-family: Yandex Sans Text;
+  font-weight: 420;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: -0.015em;
+  margin: 0 0 0 124px;
+}
+
+.header__container_profile-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 51.42px;
+  margin: 0 37.38px 0 0;
+}
+
+.header__profile {
+  width: 337px;
+  height: 72px;
+  background-image: url(../../images/Efficiency.svg);
+}
+
+.header__button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  width: 5.16px;
+  height: 25.06px;
+  background-image: url(../../images/button.svg);
+  background-repeat: no-repeat;
+  transition: opacity 0.4s linear;
+}

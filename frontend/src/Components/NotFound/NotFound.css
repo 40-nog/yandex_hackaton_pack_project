@@ -1,0 +1,36 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.notfound__title {
+  margin: 246px auto 5px;
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 169px;
+}
+
+.notfound__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 0 184px 0;
+}
+
+.notfound__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  border: none;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 967px) {
+  .notfound__title {
+    margin: 408px auto 5px;
+  }
+}

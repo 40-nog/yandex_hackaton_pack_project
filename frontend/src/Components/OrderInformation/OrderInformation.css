@@ -1,0 +1,33 @@
+.orderInformation__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.orderInformation__title {
+  margin: 0;
+  padding: 0;
+  font-family: "Yandex Sans Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 58px;
+  color: #212121;
+}
+
+.orderInformation__sub-container {
+  border: 1px solid #212121;
+  border-radius: 100px;
+  min-height: 48px;
+  width: 65.2%;
+}
+
+.orderInformation__text {
+  margin: 11px 0 0 24px;
+  font-family: Yandex Sans Text;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+}

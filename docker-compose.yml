@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13.2
+    environment:
+      POSTGRES_DB: "db"
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    restart: always
+    ports:
+      - 5545:5432
+    volumes:
+      - postgres_data_pack:/var/lib/postgresql/data/
+    env_file:
+      - .env
+
+  backend:
+    build: ./backend
+    working_dir: /backend
+    command: bash -c "alembic downgrade base && python script.py && alembic upgrade head && python full_base.py && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+    volumes:
+      - ./backend:/backend
+    ports:
+      - 8080:8000
+    depends_on:
+      - db
+    env_file:
+      - .env
+    restart: always
+
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/frontend
+    ports:
+      - 3000:3000
+    restart: always
+  
+  data_science:
+    build: ./data_science/docker_base_version
+    volumes:
+      - ./data_science/docker_base_version:/data_science
+    command: python app.py
+
+volumes:
+  postgres_data_pack:

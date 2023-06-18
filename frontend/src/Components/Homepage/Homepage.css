@@ -1,0 +1,23 @@
+.homepage {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  margin-bottom: 174px;
+}
+
+.homepage__title {
+  font-family: Yandex Sans Display;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 332px 0 0 0;
+}
+
+.homepage__button-box {
+  display: flex;
+  margin-top: 104px;
+}

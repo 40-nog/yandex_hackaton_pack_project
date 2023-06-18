@@ -1,0 +1,43 @@
+.app {
+  margin: auto;
+  /* max-width: 1920px; */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Yandex Sans Display";
+  scroll-behavior: smooth;
+}
+
+.button {
+  transition: opacity 0.4s linear;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.4;
+}
+
+html {
+  min-height: 100vh;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 30px;
+}
+
+:-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b1afaf;
+}

@@ -1,0 +1,145 @@
+.card {
+  width: 100%;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 214px;
+  border: 5px solid #f3f0e9;
+  border-radius: 13px;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.card__container_green {
+  border: 5px solid #2aad2e;
+}
+
+.card__container_yellow {
+  border: 5px solid #fed42b;
+}
+
+.img__card {
+  width: 187px;
+  height: 187px;
+  background: #f9f7f3;
+  border-radius: 16px;
+  margin: 10px 20px 7px;
+  object-fit: contain;
+}
+
+.name__container {
+  min-height: 147.88px;
+  width: 47.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 31px 0 25.12px 0;
+}
+
+.name__title {
+  margin: 0;
+  font-family: "Yandex Sans Text";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #212121;
+  font-feature-settings: "pnum" on, "lnum" on;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.barcode__container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.barcode__text {
+  margin: 0;
+  font-family: "Yandex Sans Text";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #0044ee;
+}
+
+.box__container {
+  width: 23.5%;
+  height: 147.88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin: 24px 0 auto 34px; */
+  margin-left: auto;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+
+.box__name {
+  font-family: "Yandex Sans Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+  color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 12.5px 16px;
+  margin: 0;
+}
+
+.box__name_bag {
+  background: #ffeccc;
+}
+
+.box__name_buble {
+  background: #cee4ff;
+}
+
+.box__name_null {
+  background: #F3F0E9;
+}
+
+.box__name_stretch {
+  background: #fee374;
+}
+
+.box__amount {
+  margin: 0 0 3px 0;
+  font-family: Yandex Sans Text;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.expand__button {
+  position: absolute;
+  bottom: 8px;
+  right: 50%;
+  transform: rotate(0);
+}
+
+.expanded__button_open {
+  transform: rotate(180deg);
+}
+
+.expanded__cards {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.box__progress-container {
+  align-self: stretch;
+  padding-right: 10px;
+}

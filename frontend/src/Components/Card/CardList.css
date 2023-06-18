@@ -1,0 +1,8 @@
+.cardList {
+  margin: 48px 0 0;
+  height: 900px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

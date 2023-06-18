@@ -1,0 +1,114 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  min-height: culc(100vh - 112px - 28px);
+  max-height: culc(100vh - 112px - 28px);
+  margin-bottom: 137px;
+}
+
+.keyboard__title {
+  font-family: "Yandex Sans Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 58px;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #212121;
+  margin: 56px auto 40px;
+}
+
+.keyboard__input {
+  border: 7px solid #b6b6b6;
+  border-radius: 24px;
+  width: 596px;
+  height: 100px;
+  font-family: "Yandex Sans Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #212121;
+  text-align: center;
+}
+
+.keyboard__input:focus {
+  border-color: #ffa200;
+  outline: none;
+}
+
+.keyboard__buttons-box {
+  width: 603px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 50px;
+}
+
+.keyboard__submit-button {
+  position: absolute;
+  right: 24px;
+  top: 216px;
+  background-color: #fed42b;
+  border-radius: 24px;
+  border: none;
+  font-family: "Yandex Sans Display";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 58px;
+  color: #212121;
+  width: 296px;
+  height: 662px;
+  cursor: pointer;
+}
+
+.keyboard__submit-button:hover {
+  background-color: #F5C400;
+}
+
+.keyboard__button {
+  width: 185px;
+  height: 82px;
+  background: #f3f0e9;
+  border: none;
+  border-radius: 24px;
+  font-family: "Yandex Sans Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: -0.015em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyboard__buttons-numbers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.keyboard__buttons-options {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.keyboard__form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.keyboard__button_backspace-icon {
+  background-image: url(../../images/keyboard_delete_icon.svg);
+  width: 38px;
+  height: 31px;
+}

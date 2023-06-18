@@ -1,0 +1,20 @@
+.readypage__text {
+  font-family: "Yandex Sans Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 58px;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #212121;
+  max-width: 926px;
+}
+
+.readypage {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  /* margin-top: 298px; */
+  padding: 0 24px;
+  justify-content: space-between;
+}

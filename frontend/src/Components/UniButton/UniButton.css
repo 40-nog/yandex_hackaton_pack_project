@@ -1,0 +1,40 @@
+.uniButton {
+  width: 296px;
+  /* width: 64.4%; */
+  padding: 273px 16px;
+  background-color: #fed42b;
+  border-radius: 24px;
+  border: none;
+  font-family: "Yandex Sans Display";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 58px;
+  color: #212121;
+  text-align: center;
+  cursor: pointer;
+}
+
+.uniButton:hover {
+  background-color: #F5C400;
+}
+.uniButton__home {
+  padding: 302px 16px;
+  height: 662px;
+}
+
+/* .uniButton__main {
+} */
+
+.uniButton__ready {
+  /* position: absolute;
+  right: 24px;
+  top: 216px; */
+  width: 296px;
+  padding: 302px 16px;
+}
+
+.uniButton__text {
+  width: 64.4%;
+  margin: 0;
+  text-align: center;
+}

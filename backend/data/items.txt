@@ -1,0 +1,8 @@
+4b33fcc98ea1f59d6fe4eb2e0a48bb4b,Дождевик,3,5,7,0.896,rainhood.webp
+3e646181f6f708edd3326c1626c12d23,Игрушка,3.0,2,16.8,2.078,toy.webp
+d48f3211c1ffccdc374f23139a9ab668,Толстовка,3.5,4.2,2,0.7,sweetshot.webp
+097917e584151c0c21f205b2c3aafa10,Ночник,2.8,6,1,1.087,nightlamp.webp
+25ada3fea95cadbcba7b8e6e90ee8ccd,Пуровер,4,2.4,7.9,0.1,cup.webp
+f7aee6fad1070805563ae4320c4c8104,Чайник,2.8,6,1,1.087,teapot.webp
+024bdfbbb9aa09f64957c88d9f88f6dc,Колонка,4,2.4,7.9,0.1,yandexdevice.webp
+56199cf6aae3d2327cb0041f100b0505,Освежитель воздуха,2.8,6,1,1.087,airfresher.webp
