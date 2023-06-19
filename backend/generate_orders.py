@@ -5,7 +5,7 @@ from aiohttp import ClientSession
 async def create_order(data):
     async with ClientSession() as session:
         async with session.post(
-            'http://localhost:8080/create_pack',
+            'http://localhost:8080/create_order',
             json=data
         ) as response:
             pass
