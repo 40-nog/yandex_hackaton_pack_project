@@ -29,9 +29,9 @@ services:
     restart: always
 
   frontend:
-    build: ./frontend
-    volumes:
-      - ./frontend:/frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
     restart: always
@@ -39,7 +39,7 @@ services:
   data_science:
     build: ./data_science/docker_base_version
     volumes:
-      - ./data_science/docker_base_version:/data_science
+      - ./data_science/docker_base_version/src:/data_science
     command: python app.py
 
 volumes:

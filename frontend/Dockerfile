@@ -1,12 +1,12 @@
-FROM node:16.17.0
+FROM node:14.17.0-alpine
 
-WORKDIR /frontend
+WORKDIR /app
 
-COPY package.json package-lock.json /frontend
+COPY package.json package-lock.json /app/
 
 RUN npm install
 
-COPY . /frontend
+COPY . /app
 
 RUN npm run build
 
