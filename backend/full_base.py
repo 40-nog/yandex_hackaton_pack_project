@@ -87,64 +87,7 @@ async def create_items():
             await session.commit()
 
 
-async def create_orders():
-    async with AsyncSessionLocal() as session:
-        order = Order(
-            status = Status.FORMING,
-        )
-        for pk in range(1, 9):
-            item = await session.execute(
-                select(Item).where(Item.id == pk)
-            )
-            item = item.scalars().first()
-            orderitem = OrderItem(
-                barcode=randint(100_000_000, 999_999_999)
-            )
-            orderitem.item = item
-            order.items.append(orderitem)
-        for pk in range(1, 3):
-            item = await session.execute(
-                select(Item).where(Item.id == pk)
-            )
-            item = item.scalars().first()
-            orderitem = OrderItem(
-                barcode=randint(100_000_000, 999_999_999)
-            )
-            orderitem.item = item
-            order.items.append(orderitem)
-        for pk in range(5, 7):
-            item = await session.execute(
-                select(Item).where(Item.id == pk)
-            )
-            item = item.scalars().first()
-            orderitem = OrderItem(
-                barcode=randint(100_000_000, 999_999_999)
-            )
-            orderitem.item = item
-            order.items.append(orderitem)
-        carton = await carton_crud.get_carton_by_type(
-            choice(CARTONS), session
-        )
-        ordercarton = OrderCarton(amount=1)
-        ordercarton.carton = carton
-        order.cartons.append(ordercarton)
-        session.add(ordercarton)
-        count = {}
-        for assoc in order.items:
-            item_id = assoc.item.id
-            count[item_id] = count.get(item_id, 0) + 1
-        for key, value in count.items():
-            payload = Payload(order=order, item_id=key, amount=value)
-            session.add(payload)
-        await order_crud.change_order_status(
-            order, Status.FORMING, TimeStamp.CREATED
-        )
-        session.add(order)
-        await session.commit()
-
-
 loop = asyncio.get_event_loop()
 loop.run_until_complete(create_cartons(CARTON_BARCODE))
 loop.run_until_complete(create_cargotypes())
 loop.run_until_complete(create_items())
-loop.run_until_complete(create_orders())
