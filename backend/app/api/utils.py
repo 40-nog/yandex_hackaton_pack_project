@@ -34,9 +34,12 @@ async def get_best_pack(
     except ClientError as error:
         f'Упаковка не получена. '
         f'Ошибка при выполнении HTTP запроса: {error}'
-    cartontype = bestpack_data.get(
-        'carton', BASE_CARTON
-    )
+    if isinstance(bestpack_data, dict):
+        cartontype = bestpack_data.get('carton', BASE_CARTON)
+    elif isinstance(bestpack_data, list) and bestpack_data:
+        cartontype = bestpack_data[0]
+    else:
+        cartontype = bestpack_data
     carton = await carton_crud.get_carton_by_type(
         cartontype, session
     )
