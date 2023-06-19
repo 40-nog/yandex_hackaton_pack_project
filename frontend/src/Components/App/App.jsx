@@ -163,6 +163,26 @@ function App() {
       });
   }
 
+  function sendStatusAboutNoGoods() {
+    setComment(`товара нет`);
+    setOrderIsCompleted(false);
+    const data = {
+      id: orderId,
+      is_completed: orderIsCompleted,
+      user_id: "123231434",
+      comment,
+      used_cartons: checkedBoxes,
+    };
+    Api.finishOrder(data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        setInfoTooltipText(`${err}`);
+        setIsInfoTooltipPopupOpen(true);
+      });
+  }
+
   function getOrder() {
     setIsLoader(true);
     Api.getOrder()
@@ -303,6 +323,7 @@ function App() {
               checkedCards={checkedCards}
               cardBarcode={cardBarcode}
               allBarcodesFromBackend={allBarcodesFromBackend}
+              sendStatusAboutNoGoods={sendStatusAboutNoGoods}
             />
           }
         />
