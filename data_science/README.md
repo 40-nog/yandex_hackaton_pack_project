@@ -1,1 +1,0 @@
-# Ya_hackaton_package_choose
