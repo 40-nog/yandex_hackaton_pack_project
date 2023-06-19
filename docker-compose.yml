@@ -37,9 +37,9 @@ services:
     restart: always
   
   data_science:
-    build: ./data_science/docker_base_version
+    build: ./data_science
     volumes:
-      - ./data_science/docker_base_version/src:/data_science
+      - ./data_science/src:/data_science
     command: python app.py
 
 volumes:
