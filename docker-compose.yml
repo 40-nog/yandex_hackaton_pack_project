@@ -17,7 +17,7 @@ services:
   backend:
     build: ./backend
     working_dir: /backend
-    command: bash -c "alembic downgrade base && python script.py && alembic upgrade head && python full_base.py && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+    command: bash -c "alembic downgrade base && python script.py && alembic upgrade head && python full_base.py && exec uvicorn app.main:app --host backend --port 8000 --reload"
     volumes:
       - ./backend:/backend
     ports:
@@ -40,7 +40,10 @@ services:
     build: ./data_science
     volumes:
       - ./data_science/src:/data_science
+    ports:
+      - 6000:6000
     command: python app.py
+
 
 volumes:
   postgres_data_pack:

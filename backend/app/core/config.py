@@ -3,7 +3,7 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     app_title: str = 'Сервис упаковки заказов'
-    pack_service_url: str = 'http://localhost:8000'
+    pack_service_url: str = 'http://data_science:6000'
     database_url: str
     POSTGRES_DB: str
     POSTGRES_USER: str
