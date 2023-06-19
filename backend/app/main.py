@@ -46,10 +46,10 @@ app.add_middleware(
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--port', default=8080, type=int, dest='port')
-    parser.add_argument('--host', default='0.0.0.0', type=str, dest='host')
+    parser.add_argument('--port', default=8000, type=int, dest='port')
+    parser.add_argument('--host', default='backend', type=str, dest='host')
     parser.add_argument('--debug', action='store_true', dest='debug')
     args = vars(parser.parse_args())
 
     uvicorn.run(app, **args)
-    uvicorn.run(app, host='0.0.0.0', port=8080, debug=True)
+    uvicorn.run(app, host='backend', port=8000, debug=True)

@@ -49,10 +49,10 @@ def get_prediction(request: Order):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--port", default=8000, type=int, dest="port")
-    parser.add_argument("--host", default="0.0.0.0", type=str, dest="host")
+    parser.add_argument("--port", default=6000, type=int, dest="port")
+    parser.add_argument("--host", default="data_science", type=str, dest="host")
     parser.add_argument("--debug", action="store_true", dest="debug")
     args = vars(parser.parse_args())
 
     uvicorn.run(app, **args)
-    uvicorn.run(app, host="0.0.0.0", port=8000, debug=True)
+    uvicorn.run(app, host="data_science", port=6000, debug=True)
