@@ -2,7 +2,7 @@ FROM node:16.17.0
 
 WORKDIR /frontend
 
-COPY package.json package-lock.json /frontend
+COPY package.json package-lock.json /frontend/
 
 RUN npm install
 

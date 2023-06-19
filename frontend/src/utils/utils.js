@@ -26,7 +26,7 @@ const getBoxNameByBarcode = (barcode) => {
       return "Коробка YMW";
     case 310:
       return "Коробка MYF";
-    case 300:
+    case 320:
       return "Коробка YMX";
     case 180:
       return "Коробка YML";

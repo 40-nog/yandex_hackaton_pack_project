@@ -14,15 +14,6 @@
   scroll-behavior: smooth;
 }
 
-.button {
-  transition: opacity 0.4s linear;
-  cursor: pointer;
-}
-
-.button:hover {
-  opacity: 0.4;
-}
-
 html {
   min-height: 100vh;
   max-width: 100vw;

@@ -85,10 +85,10 @@ function ExpandedCard({
           )}
         </div>
         <div className="box__container">
-          {packageType === null ? (
-            <p className={`box__name ${boxName}`}>Нет упаковки</p>
+        {packageType !== null ? (
+           <p className={`box__name ${boxName}`}>{packageType}</p>
           ) : (
-            <p className={`box__name ${boxName}`}>{packageType}</p>
+            <p className={`box__name ${boxName}`} />
           )}
           <div className="box__progress-container">
             <p className="box__amount">{amount}шт.</p>
